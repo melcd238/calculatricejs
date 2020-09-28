@@ -8,7 +8,7 @@ do {
      choix = Number( prompt(" Que souhaitez-vous faire?\n\n 1 - Addition\n 2 - Multiplication\n 3 - Soustraction\n 4 - Division\n")); 
      
 
-} while ( isNaN(choix) ||  choix == null || choix == "" || choix > 4 ); 
+} while ( isNaN(choix) ||   choix > 4 ); 
 // tant que choix n'est pas égale à 1,2,3 ou 4 , le prompt s'affiche. 
 // Choix des deux nombres:
 
@@ -29,7 +29,7 @@ function addition( nombreA, nombreB) {
     return resultatAddition;
     
 }
-let resultatAddition= addition(premierNombre, deuxiemeNombre);
+
 
 function multiplication( nombreA, nombreB) {
 
@@ -37,7 +37,7 @@ function multiplication( nombreA, nombreB) {
     return resultatMultiplication;
     
 }
-let resultatMultiplication = multiplication(premierNombre, deuxiemeNombre);
+
 
 function soustraction(nombreA, nombreB) {
 
@@ -45,13 +45,14 @@ function soustraction(nombreA, nombreB) {
     return resultatSoustraction;
     
 }
-let resultatSoustraction = soustraction(premierNombre, deuxiemeNombre);
+
 
 
 function division(nombreA, nombreB) {
     // on crée une condition et on déclenche une erreur dans le cas ou l'utilisateur voudrait diviser par 0.
-    if (nombreB == 0) {
+    if(nombreB == 0) {
         throw new Error ("Impossible de diviser par 0, cela est interdit.");
+        
         
     }
 
@@ -60,7 +61,7 @@ function division(nombreA, nombreB) {
     
 }
 
-let resultatDivision = division(premierNombre, deuxiemeNombre);
+
 
 // Appeler la bonne fonction 
 // Pour que l'exception soit prise en compte, il faut que le bloc Switch soit dans un bloc try :

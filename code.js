@@ -1,5 +1,8 @@
 let choix;
 // demande de choix:
+let restart = false // Par défaut, on ne repropose pas de nouveau calcul
+do{
+    
 do {
 
      choix = Number( prompt(" Que souhaitez-vous faire?\n\n 1 - Addition\n 2 - Multiplication\n 3 - Soustraction\n 4 - Division\n")); 
@@ -89,7 +92,14 @@ switch (choix) {
 catch(error){
     alert(error);
 }
-// Proposer de refaire un calcul : 
+ restart= confirm("Souhaitez-vous un nouveau calcul?")
+
+}
+
+ 
+while(restart);
+
+
 
 
 
